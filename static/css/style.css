@@ -1,0 +1,48 @@
+html {
+    --sidebar-width: 150px;
+    --max-content-width: 0.5fr
+}
+
+.sidenav {
+    justify-self: start;
+    display: grid;
+    font-size: larger;
+    max-width: var(--sidebar-width);
+    position: fixed;
+}
+
+content {
+    display: flex;
+    grid-template-columns: 2;
+}
+
+main {
+    margin-left: var(--sidebar-width);
+}
+
+.scav-grid {
+    padding: 2rem;
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+    row-gap: 2rem;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.scav-item {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 2px solid #000000;
+    width: 100px;
+    height: 150px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.description {
+    display: grid;
+    margin-bottom: 2%;
+}
