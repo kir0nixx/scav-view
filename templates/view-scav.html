@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+{% block title %}
+    Scav Viewer Prototype - View Scav ID:{{ id }}
+{% endblock title %}
+
+{% block content %}
+    <h1>ID: {{ scav_info['id'] }}</h1>
+
+    <img src="/static/images/{{ scav_info['id'] }}.gif" alt="">
+
+    <div class="description">
+        <label for="description">Description:</label>
+        <textarea readonly cols="75" rows="10">{{ scav_info['description'] }}</textarea>
+    </div>
+
+    <label for="tags">Tags:</label>
+    <p>{{ scav_info['tags'] }}</p>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Scav Viewer Prototype - Search
+{% endblock title %}
+
+{% block content %}
+    <h1>Search Tags</h1>
+    <form method="post" action="/search">
+        <label for="query">Tag to search for:</label>
+        <input type="text" name="query" id="query" value="{{ query }}" Xrequired>
+
+        <button type="submit">Search</button>
+    </form>
+
+    <label for="results">Scavengers found with tag {{ query }}: {{ scav_num }}</label>
+    <div class="scav-grid">
+        {% for scav in scavs %}
+            <div class="scav-item">
+                <a href="/view-id/{{ scav['id'] }}">
+                    <p>ID:{{ scav['id'] }}</p>
+                    <img src="/static/images/{{ scav['id'] }}.gif">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}

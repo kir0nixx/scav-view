@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Scav Viewer Prototype - Search
+{% endblock title %}
+
+{% block content %}
+    <h1>Search Tags</h1>
+    <form method="post" action="{{ search }}">
+        <label for="query">Tag to search for:</label>
+        <input type="text" name="query" id="query" value="{{ query }}" Xrequired>
+
+        <button type="submit">Search</button>
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Scav Viewer Prototype - View All
+{% endblock title %}
+
+{% block content %}
+
+    <div class="scav-grid">
+        {% for scav in scavs %}
+            <div class="scav-item">
+                <a href="/view-id/{{ scav['id'] }}">
+                    <p>ID:{{ scav['id'] }}</p>
+                    <img src="/static/images/{{ scav['id'] }}.gif">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}
